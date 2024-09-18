@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    height: 100% !important;
+}
+a{
+  color: #e2dddd;  
+}
+a:visited{
+    color: #e2dddd;   
+}
+a i:visited{
+    color: #e2dddd;
+}
+body{
+    background-color: #242323;
+    color: #868484;
+    font-family: "Rubik", sans-serif;
+}
+nav{
+    background-color: #242323;
+}
+nav div a.logo{
+    color: #FF7517;
+}
+.navbar-brand{
+    color: #FF7517;
+    transition: all 0.4s ease;
+}
+.logo{
+    font-family: "Permanent Marker", "cursive";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.logo a{
+    color: #FF7517;
+    text-decoration: none;
+}
+.nav-items{
+    display: flex;
+    padding: 5px;  
+    gap: 10px;
+}
+.nav_ form{
+    display: flex;
+    gap: 10px;
+}
+.nav_ input, .search-bar button{
+    padding: 5px;
+    border: none;
+    background-color: #242323;
+    color: #e2dddd;
+    cursor: pointer;
+}
+.nav_ input:hover, .search-bar button:hover{
+    color: #FF7517;
+    transition: all 0.4s ease-in-out;
+}
+.search-bar input{
+    background-color: #535050;
+    color: #e2dddd;
+    border: none;
+    border-radius: 5px;
+    cursor: text;
+}
+.search-bar button{
+    color: #FF7517;
+}
+.search-bar button:hover{
+    color: #e2dddd;
+}
+h1{
+    font-style: normal;
+    color: #eee;
+}
+.hero-button {
+    background: #098191;
+    transition: background ease .25s;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.hero button:hover {
+    background: #b78062
+}
+.hero button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+.show-results{
+    display: flex;
+    height: 90vh;
+    width: 70%;
+    margin: auto;
+    padding: 15px;
+}
+.show-image{
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+.show-image img{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 95%;
+    justify-content: space-between;
+}
+.show-description{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.info{
+    display: flex;
+    margin-left: 15px;
+}
+.attributes{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    gap: 15px;
+}
+.name{
+    color: #e2dddd;
+    font-size: 1.6rem;
+    font-weight: 600;
+    align-items: center;
+}
+.name span{
+    font-size: 0.7rem;
+    background-color: #118d3a;
+    color: #cac8c8;
+    padding: 5px;
+    border-radius: 5px;
+}
+.desc{
+    font-size: 0.9rem;
+}
+.attributes span{
+    border-radius: 5px;
+    background-color: #444444;
+    color: #e2dddd;
+    padding: 5px;
+}
+.card {
+    max-height: 400px; /* Set a max height if necessary */
+    overflow: hidden;
+    color: #e2dddd;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 250px; /* Maintain consistent height */
+    width: 100%;   /* Full width for responsive layout */
+}
+
+.card-body {
+    text-align: center; /* Optional: Center-align text */
+}
+form .browse-btn{
+    transition: all 0.4s ease;
+}
+form .browse-btn:hover{
+    background-color: #FF7517 !important;
+    color: #d4d0d0 !important;
+}
+.page-button{
+    width: 30%;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+.page-button-arrow{
+    padding: 10px 30px;
+    color: #e2dddd;
+    background-color: #444444;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.page-button-arrow:hover{
+    color: #eee;
+    background-color: #FF7517;
+    transition: all 0.4s ease-in-out;
+}
+footer{
+    background-color: #242323;
+    color: #e2dddd;
+}
+footer ul li a.foot-nav{
+    color: #e2dddd;
+    padding: 0.5rem 1rem;
+}
+footer ul li a.foot-nav:hover{
+    transition: all 0.4s ease-in-out;
+    color: #FF7517;
+}

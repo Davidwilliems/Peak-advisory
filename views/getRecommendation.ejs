@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %>
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="<%= coverImage %>" class="d-block mx-lg-auto img-fluid rounded" alt="<%= show_name_en %> Cover image" width="700" height="400" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h2 class=" fw-bold lh-1" style="color: #e2dddd;"><%= show_name_en %> / <%= show_name_ja_jp %> </h2>
+        <span class="badge text-bg-success"><%= subType %></span>
+        <p class="lead"><%= desc %></p>
+        <div class="d-grid gap-2 d-md-flex flex-wrap justify-content-md-start">
+          <div class="p-1"><span class="badge text-bg-primary rounded">Release Date: <%= startDate %></span></div>
+          <div class="p-1"><span class="badge text-bg-dark rounded">Status: <%= show_status %></span></div>
+          <div class="p-1"><span class="badge text-bg-warning rounded">Age Rating: <%= ageRating %></span></div>
+          <div class="p-1"><span class="badge text-bg-primary">No of episodes: <%= epiCount %></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <%- include('partials/footer.ejs') %>

@@ -1,0 +1,41 @@
+<%- include('partials/header.ejs') %>
+<div class="container browse-content" style="margin-top: 80px;">
+  <div class="row ">
+      <% browseArray.forEach(element => { %>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4 ">
+          <div class="card h-100 rounded ">
+              <!-- Card Image with preserved aspect ratio -->
+              <img src="<%= element.coverImage %>" class="card-img-top img-fluid" alt="<%= element.show_name_en %>" style="object-fit: cover; height: 250px; width: 100%; object-position: top;">
+              <div class="card-body flex-grow-1 d-flex flex-column justify-content-between" style="background-color: #242323; ">
+                  <h6 class="card-title"><%= element.show_name_en %></h6>
+                  <form action="/viewShow" class="mt-auto" method="post">
+                      <input type="hidden" name="showId" value="<%= element.showId %>">
+                      <button class="btn browse-btn" type="submit" style="background-color: #535050; color: #f3f2f2;">More Info</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <% }) %>
+  </div>
+</div>
+
+<nav aria-label="Page navigation example" class="container" >
+  <ul class="pagination p-5 justify-content-center ">
+    <li class="page-item">
+      <form action="/browse" method="get">
+        <input type="hidden" name="pageOffset" value="<%= pageOffset - pageLimit %>">
+        <input type="hidden" name="pageLimit" value="<%= pageLimit %>">
+        <button class="page-link text-bg-dark" type="submit" <%= pageOffset <= 0 ? 'disable' : '' %> ><i class="fa-solid fa-chevron-left"></i></button>
+      </form>
+    </li>
+    <li class="page-item">
+      <form action="/browse" method="get">
+        <input type="hidden" name="pageOffset" value="<%= pageOffset + pageLimit %>">
+        <input type="hidden" name="pageLimit" value="<%= pageLimit %>">
+        <button class="page-link text-bg-dark" type="submit"><i class="fa-solid fa-chevron-right"></i></button>
+      </form>
+    </li>
+  </ul>
+</nav>
+<script src="../index.js"></script>
+<%- include('partials/footer.ejs') %>

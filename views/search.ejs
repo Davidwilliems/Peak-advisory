@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+<% animeArray.forEach(element => { %>
+    <div class="show-results">
+        <img class="show-image" src="<%= element.coverImage %>" alt="<%= element.show_name_en %> Cover image">
+        <div class="details">
+            <div class="show-description">
+                <p class="name"><%= element.show_name_en %> / <%= element.show_name_ja_jp %> <span><%= element.subType %></span></p>
+                <span class="desc"><%= element.desc %></span>
+            </div>
+            <div class="d-grid gap-2 d-md-flex flex-wrap justify-content-md-start">
+                <div class="p-2 "><span class="badge rounded">Release Date: <%= element.startDate %></span></div>
+                <div class="p-2"><span class="badge text-bg-dark rounded">Status: <%= element.show_status %></span></div>
+                <div class="p-2"><span class="badge text-bg-warning rounded">Age Rating: <%= element.ageRating %></span></div>
+                <div class="p-2"><span class="badge text-bg-primary">No of episodes: <%= element.epiCount %></span></div>
+              </div>  
+        </div>       
+    </div>
+<% }) %>
+<%- include('partials/footer.ejs') %>

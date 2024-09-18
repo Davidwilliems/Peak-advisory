@@ -1,0 +1,46 @@
+<%- include('partials/header.ejs') %>
+</header>
+<div class="container py-4 mt-5">
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold text-body-light">Get a recommendation!</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Can't figure out what anime to watch? Use the "Try it" button to get a show recommendation. Who knows? You might just find your next favorite anime!</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+            <form action="/getRecommendation" method="get">
+                <button class="btn btn-outline-secondary btn-lg px-4" type="submit">Try it <i class="fa-solid fa-chevron-right"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh;">
+          <div class="container px-5">
+            <img src="/images/vash_the_stampede_by_artfulbeast_dcx3bsz-pre.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-bg-dark rounded-3 flex-grow-1 d-flex flex-column justify-content-between">
+            <h2>Browse Shows</h2>
+            <p>With thousands of entries made available to you, you can browse through a seemingly endless collection of anime!</p>
+            <form action="/browse" method="get" class="mt-auto">
+                <button class="btn btn-outline-light" type="Submit">Browse shows</button>    
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-body-tertiary border rounded-3 flex-grow-1 d-flex flex-column justify-content-between">
+            <h2>Thank you!</h2>
+            <p>Thank you so much for visiting! Do enjoy your stay here. If you have any complaints about the app, don't hesistate to reach out to me via email or through the contact links in the footer. Thank you for visiting! &#x1F493;</p>
+            <div class="mt-auto">
+              <button type="button" class="btn btn-dark px-4 me-md-2">
+                <a style="text-decoration: none;" href="mailto: williamsdavid833@gmail.com"> 
+                  <i class="fa-solid fa-envelope"></i> Send email
+                </a>
+            </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>
+<%- include('partials/footer.ejs') %>
