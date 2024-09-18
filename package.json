@@ -15,6 +15,9 @@
     "body-parser": "^1.20.2",
     "express": "^4.19.2"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "devDependencies": {
     "nodemon": "^3.1.4"
   }
