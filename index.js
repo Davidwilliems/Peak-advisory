@@ -13,23 +13,8 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended : true}));
 
 //This renders the hompage
-app.get("/", async (req, res) => {
-    const diffId = Math.floor(Math.random() * anime_list);
-    console.log(diffId);
-    try {
-        const response = await axios.get(API_url+"/anime/" + diffId);
-        const dataPack = response.data.data;
-        res.render("index.ejs", 
-            {
-                coverImage : dataPack.attributes.posterImage.original,
-            }
-    );
-    } 
-    catch (error) {
-        console.error("Error: ", error.response ? error.response.data : error.message);
-        console.log("Couldn't fetch data. No data with this ID: " + diffId);
-        res.redirect("/");
-    }
+app.get("/", (req, res) => {
+        res.render("index.ejs");
 });
 
 app.get("/getRecommendation", async (req, res)=> {
