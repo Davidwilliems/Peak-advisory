@@ -13,7 +13,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended : true}));
 
 //This renders the hompage
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
         res.render("index.ejs");
 });
 
