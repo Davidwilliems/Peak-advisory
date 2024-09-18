@@ -1,7 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import axios from 'axios';
-import ejs from 'ejs'
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -126,7 +125,7 @@ app.post("/viewShow", async (req, res)=> {
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).send('Something broke!');
+    res.status(500).send(err);
 });
 
 
