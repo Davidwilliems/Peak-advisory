@@ -63,6 +63,7 @@ app.post("/search", async (req, res) => {
             desc: anime.attributes.description,
             epiCount: anime.attributes.episodeCount,
             startDate: anime.attributes.startDate,
+                showId: anime.id
         }));
         res.render("search.ejs", { animeArray });
     } 
