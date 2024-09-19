@@ -1,19 +1,21 @@
 <%- include('partials/header.ejs') %>
-<% animeArray.forEach(element => { %>
-    <div class="show-results">
-        <img class="show-image" src="<%= element.coverImage %>" alt="<%= element.show_name_en %> Cover image">
-        <div class="details">
-            <div class="show-description">
-                <p class="name"><%= element.show_name_en %> / <%= element.show_name_ja_jp %> <span><%= element.subType %></span></p>
-                <span class="desc"><%= element.desc %></span>
+<div class="container browse-content" style="margin-top: 80px;">
+    <div class="row ">
+        <% animeArray.forEach(element => { %>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 ">
+            <div class="card h-100 rounded ">
+                <!-- Card Image with preserved aspect ratio -->
+                <img src="<%= element.coverImage %>" class="card-img-top img-fluid" alt="<%= element.show_name_en %>" style="object-fit: cover; height: 250px; width: 100%; object-position: top;">
+                <div class="card-body flex-grow-1 d-flex flex-column justify-content-between" style="background-color: #242323; ">
+                    <h6 class="card-title"><%= element.show_name_en %></h6>
+                    <form action="/viewShow" class="mt-auto" method="post">
+                        <input type="hidden" name="showId" value="<%= element.showId %>">
+                        <button class="btn browse-btn" type="submit" style="background-color: #535050; color: #f3f2f2;">More Info</button>
+                    </form>
+                </div>
             </div>
-            <div class="d-grid gap-2 d-md-flex flex-wrap justify-content-md-start">
-                <div class="p-2 "><span class="badge rounded">Release Date: <%= element.startDate %></span></div>
-                <div class="p-2"><span class="badge text-bg-dark rounded">Status: <%= element.show_status %></span></div>
-                <div class="p-2"><span class="badge text-bg-warning rounded">Age Rating: <%= element.ageRating %></span></div>
-                <div class="p-2"><span class="badge text-bg-primary">No of episodes: <%= element.epiCount %></span></div>
-              </div>  
-        </div>       
+        </div>
+        <% }) %>
     </div>
-<% }) %>
+  </div>
 <%- include('partials/footer.ejs') %>
